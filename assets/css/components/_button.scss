@@ -1,0 +1,106 @@
+//  Button SCSS
+.btn {
+    cursor: pointer;
+    font-family: $font-Barlow;
+    border: none;
+    // transition: $btn-transition;
+    transition: 0.3s all ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    flex-shrink: 0;
+    & svg {
+        flex-shrink: 0;
+        & * {
+            transition: $btn-transition;
+        }
+    }
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+ 
+.btn-md {
+    font-size: 18px;
+    line-height: 110%;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    padding: 16px 32px;
+    border-radius: 10px 10px 0 10px;
+    letter-spacing: 0.02em;
+}
+
+
+.btn-primary {
+    color: $white;
+    border: 1px solid $primary;
+    background-color: $primary;
+    &:hover {
+        background-color: $secondary;
+        color: $white;
+        border-color: $secondary;
+    }
+}
+ 
+.btn-white {
+    color: $primary;
+    border: 1px solid $white;
+    background-color: $white;
+    &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $orange;
+    }
+}
+
+.btn-light {
+    color: $secondary;
+    border: 1px solid $white;
+    background-color: $white;
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+    }
+}
+ 
+ 
+ .btn-search {
+    border:1px solid $primary;
+    border-radius: 10px 10px 0 10px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    @include tablet {
+        width: 36px;
+        height: 36px;
+    }
+ }
+
+ .btn-link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    color: $neutral-500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: $btn-transition;
+    &:hover {
+        color: $orange;
+    }
+    & svg {
+        position: relative;
+        top: 1px;
+    }
+ }
